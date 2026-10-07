@@ -1,0 +1,86 @@
+body {
+    margin: 2vw;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.grid {
+    display: grid;
+    margin: 2vw 15vw 2vw 15vw;
+    grid-template-columns: repeat(7, 9.42vw);
+    align-items: start;
+}
+
+.blue {
+    color: #11C7FF;
+}
+
+.title {
+    grid-area: 1 / 1 / 1 / 3;
+}
+
+.description {
+    grid-area: 1 / 4 / 1 / 7;
+}
+
+.gridcal {
+    display: grid;
+    margin: 2vw 15vw 2vw 15vw;
+    grid-template-columns: repeat(7, 9.42vw);
+    grid-template-rows: repeat(5, 9.42vw);
+    align-items: start;
+    border-bottom: solid .5px black;
+    border-left: solid .5px black;
+}
+
+div.item {
+    border: solid .5px black;
+    width: 7.42vw;
+    height: 7.42vw;
+    padding: 1vw;
+    border-left: 0;
+    border-bottom: 0;
+}
+
+.blue:hover {
+    background-color: #11C7FF;
+    color: white;
+}
+
+.map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay {
+    margin: auto;
+    z-index: 2;
+    width: auto; 
+    top: 50%;
+    left: 50%; 
+    align-content: center;
+    transform: translate(-50%, -50%); 
+    position: absolute;
+}
+
+.grid2 {
+    display: grid;
+    margin: 2vw 15vw 2vw 15vw;
+    grid-template-columns: repeat(7, 9.42vw);
+    grid-template-rows: repeat(12, 9.42vw);
+    align-items: start;
+}
+
+.title-entry {
+    grid-area: 1 / 2 / 1 / 3;
+}
+
+.img-entry {
+    grid-area: 2 / 3 / 7 / 7;
+}

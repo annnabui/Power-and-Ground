@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art of Noticing</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="info grid">
+        <div class="title">
+            Art of Noticing<br>
+            –– 11/2024<br>
+            <span style="color: #11C7FF" id="location">–– LinkNYC 5th Ave & E 14th St</span><br>
+            –– Internet Geography @ Parsons
+        </div>
+        <div class="description">
+            <br>
+            A project on observing pieces of the internet infrastructure. I chose a LinkNYC on my way to school and work since I pass by it almost every day.
+        </div>
+    </div>
+    <div class="calendar gridcal">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div id="entry1" class="blue item">30</div>
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div id="entry2" class="blue item">5</div>
+        <div class="item">6</div>
+        <div id="entry3" class="blue item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item">10</div>
+        <div id="entry4" class="blue item">11</div>
+        <div class="item">12</div>
+        <div class="item">13</div>
+        <div class="item">14</div>
+        <div class="item">15</div>
+        <div class="item">16</div>
+        <div class="item">17</div>
+        <div class="item">18</div>
+        <div class="item">19</div>
+        <div class="item">20</div>
+        <div id="entry5" class="blue item">21</div>
+        <div class="item">22</div>
+        <div class="item">23</div>
+        <div class="item">24</div>
+        <div class="item">25</div>
+        <div class="item">26</div>
+        <div class="item">27</div>
+        <div class="item">28</div>
+        <div id="entry6" class="blue item">29</div>
+        <div class="item">30</div>
+        <div class="item"></div>
+    </div>
+
+    <div class="map" id="mapIframe">
+        <iframe src="https://www.google.com/maps/embed?pb=!4v1733127387061!6m8!1m7!1s3UrT20okUrd9GBEC208sAQ!2m2!1d40.73596655453059!2d-73.99346928213166!3f19.971577281501215!4f-6.726585803716887!5f0.7820865974627469" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <div class="overlay" id="e1img"><img src="./imgs/entry1.png"></div>
+    <div class="overlay" id="e2img"><img src="./imgs/entry2.png"></div>
+    <div class="overlay" id="e3img"><img src="./imgs/entry3.png"></div>
+    <div class="overlay" id="e4img"><img src="./imgs/entry4.png"></div>
+    <div class="overlay" id="e5img"><img src="./imgs/entry5.png"></div>
+    <div class="overlay" id="e6img"><img src="./imgs/entry6.png"></div>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const mapIframe = document.getElementById('mapIframe');
+            const location = document.getElementById('location');
+
+            const entry1 = document.getElementById('entry1');
+            const entry1Image = document.getElementById('e1img');
+
+            const entry2 = document.getElementById('entry2');
+            const entry2Image = document.getElementById('e2img');
+
+            const entry3 = document.getElementById('entry3');
+            const entry3Image = document.getElementById('e3img');
+            
+            const entry4 = document.getElementById('entry4');
+            const entry4Image = document.getElementById('e4img');
+
+            const entry5 = document.getElementById('entry5');
+            const entry5Image = document.getElementById('e5img');
+
+            const entry6 = document.getElementById('entry6');
+            const entry6Image = document.getElementById('e6img');
+
+            mapIframe.style.display = 'none';
+            entry1Image.style.display = 'none';
+            entry2Image.style.display = 'none';
+            entry3Image.style.display = 'none';
+            entry4Image.style.display = 'none';
+            entry5Image.style.display = 'none';
+            entry6Image.style.display = 'none';
+
+            location.addEventListener('click', () => {
+                event.stopPropagation();
+                mapIframe.style.display = 'flex';
+            });
+
+            mapIframe.addEventListener('click', (event) => {
+                if (event.target === mapIframe) {
+                    mapIframe.style.display = 'none';
+                }
+            });
+
+            entry1.addEventListener('mouseover', ()=> {
+                entry1Image.style.display = 'block';
+            });
+
+            entry1.addEventListener('mouseout', ()=> {
+                entry1Image.style.display = 'none';
+            });
+
+            entry1.addEventListener('click', (event) => {
+                window.location.href = './entries/entry1.html';
+            });
+
+            entry2.addEventListener('mouseover', ()=> {
+                entry2Image.style.display = 'block';
+            });
+
+            entry2.addEventListener('mouseout', ()=> {
+                entry2Image.style.display = 'none';
+            });
+
+            entry3.addEventListener('mouseover', ()=> {
+                entry3Image.style.display = 'block';
+            });
+
+            entry3.addEventListener('mouseout', ()=> {
+                entry3Image.style.display = 'none';
+            });
+
+            entry4.addEventListener('mouseover', ()=> {
+                entry4Image.style.display = 'block';
+            });
+
+            entry4.addEventListener('mouseout', ()=> {
+                entry4Image.style.display = 'none';
+            });
+
+            entry5.addEventListener('mouseover', ()=> {
+                entry5Image.style.display = 'block';
+            });
+
+            entry5.addEventListener('mouseout', ()=> {
+                entry5Image.style.display = 'none';
+            });
+
+            entry6.addEventListener('mouseover', ()=> {
+                entry6Image.style.display = 'block';
+            });
+
+            entry6.addEventListener('mouseout', ()=> {
+                entry6Image.style.display = 'none';
+            });
+        });
+    </script>
+</body>
+</html>
